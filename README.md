@@ -9,6 +9,7 @@ We expect a fully functioninig command line REPL application for an inventory qu
 Feel free to modify Makefile as you see fit.
 
 ## Test Code Explanation
+** tests can be accessed by using the 'test' command. more info is listed about it under ':help'**
 TestSuite tests all (used) DataMaps and UnorderMap class functions using cassert. Each function verifies expected behavior and special cases:
 
 testQuoteLineParser() – Makes sure the CSV lines are parsed correctly regardless of format or empty fields.

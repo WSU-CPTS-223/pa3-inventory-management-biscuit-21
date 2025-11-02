@@ -112,6 +112,5 @@ void TestSuite::testAll() {
     testErase();
     testRehash();
 
-    cout << "All tests passed\n"
-        << "> ";
+    cout << "-> All tests passed\n";
 }

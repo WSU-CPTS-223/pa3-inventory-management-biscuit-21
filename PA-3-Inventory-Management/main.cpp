@@ -11,7 +11,7 @@ void printHelp()
     cout << "Supported list of commands: " << endl;
     cout << " 1. find <inventoryid> - Finds if the inventory exists. If exists, prints details. If not, prints 'Inventory not found'." << endl;
     cout << " 2. listInventory <category_string> - Lists just the id and name of all inventory belonging to the specified category. If the category doesn't exists, prints 'Invalid Category'." << endl;
-    cout << " 3. makes sure program is working properly\n"
+    cout << " 3. test - makes sure program is working properly\n"
          << endl;
     cout << " Use :quit to quit the REPL" << endl;
 }
@@ -20,7 +20,8 @@ bool validCommand(string line)
 {
     return (line == ":help") ||
            (line.rfind("find", 0) == 0) ||
-           (line.rfind("listInventory") == 0);
+           (line.rfind("listInventory") == 0) ||
+           (line.rfind("test") == 0);
 }
 
 void evalCommand(string line, UnorderedMap<std::string, Data>& idMap, UnorderedMap<std::string, std::vector<std::string>>& catMap)
@@ -127,9 +128,6 @@ int main(int argc, char const *argv[])
     auto ADMs = bootStrap();
     auto& idMap = ADMs.getIDMap();
     auto& catMap = ADMs.getCategoryMap();
-
-    TestSuite tests;
-    tests.testAll();
 
     while (getline(cin, line) && line != ":quit")
     {
