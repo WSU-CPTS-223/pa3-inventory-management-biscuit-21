@@ -1,2 +1,16 @@
-mainexe.dSYM/
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.ipch
+*.pdb
+
+# Build files
+build/
+*.o
+*.exe
+*.obj
+
+# OS-specific
 .DS_Store
+Thumbs.db
